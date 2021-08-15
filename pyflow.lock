@@ -1,0 +1,162 @@
+[[package]]
+id = 24
+name = "attrs"
+version = "21.2.0"
+source = "pypi+https://pypi.org/pypi/attrs/21.2.0/json"
+dependencies = []
+
+[[package]]
+id = 18
+name = "toml"
+version = "0.10.2"
+source = "pypi+https://pypi.org/pypi/toml/0.10.2/json"
+dependencies = []
+
+[[package]]
+id = 6
+name = "typed-ast"
+version = "1.4.3"
+source = "pypi+https://pypi.org/pypi/typed-ast/1.4.3/json"
+dependencies = []
+
+[[package]]
+id = 19
+name = "py"
+version = "1.10.0"
+source = "pypi+https://pypi.org/pypi/py/1.10.0/json"
+dependencies = []
+
+[[package]]
+id = 14
+name = "importlib-metadata"
+version = "4.6.4"
+source = "pypi+https://pypi.org/pypi/importlib-metadata/4.6.4/json"
+dependencies = ["zipp 3.5.0 pypi+https://pypi.org/pypi/zipp/3.5.0/json", "typing-extensions 3.10.0.0 pypi+https://pypi.org/pypi/typing-extensions/3.10.0.0/json"]
+
+[[package]]
+id = 10
+name = "regex"
+version = "2021.7.6"
+source = "pypi+https://pypi.org/pypi/regex/2021.7.6/json"
+dependencies = []
+
+[[package]]
+id = 4
+name = "geographiclib"
+version = "1.52.0"
+source = "pypi+https://pypi.org/pypi/geographiclib/1.52.0/json"
+dependencies = []
+
+[[package]]
+id = 22
+name = "pyparsing"
+version = "3.0.0b3"
+source = "pypi+https://pypi.org/pypi/pyparsing/3.0.0b3/json"
+dependencies = []
+
+[[package]]
+id = 1
+name = "methodtools"
+version = "0.4.5"
+source = "pypi+https://pypi.org/pypi/methodtools/0.4.5/json"
+dependencies = []
+
+[[package]]
+id = 23
+name = "iniconfig"
+version = "1.1.1"
+source = "pypi+https://pypi.org/pypi/iniconfig/1.1.1/json"
+dependencies = []
+
+[[package]]
+id = 20
+name = "pluggy"
+version = "0.13.1"
+source = "pypi+https://pypi.org/pypi/pluggy/0.13.1/json"
+dependencies = []
+
+[[package]]
+id = 21
+name = "packaging"
+version = "21.0"
+source = "pypi+https://pypi.org/pypi/packaging/21.0/json"
+dependencies = ["pyparsing 3.0.0b3 pypi+https://pypi.org/pypi/pyparsing/3.0.0b3/json"]
+
+[[package]]
+id = 2
+name = "loguru"
+version = "0.5.3"
+source = "pypi+https://pypi.org/pypi/loguru/0.5.3/json"
+dependencies = []
+
+[[package]]
+id = 8
+name = "mypy-extensions"
+version = "0.4.3"
+source = "pypi+https://pypi.org/pypi/mypy-extensions/0.4.3/json"
+dependencies = []
+
+[[package]]
+id = 13
+name = "click"
+version = "8.0.1"
+source = "pypi+https://pypi.org/pypi/click/8.0.1/json"
+dependencies = ["importlib-metadata 4.6.4 pypi+https://pypi.org/pypi/importlib-metadata/4.6.4/json"]
+
+[[package]]
+id = 5
+name = "black"
+version = "21.7b0"
+source = "pypi+https://pypi.org/pypi/black/21.7b0/json"
+dependencies = ["typed-ast 1.4.3 pypi+https://pypi.org/pypi/typed-ast/1.4.3/json", "click 8.0.1 pypi+https://pypi.org/pypi/click/8.0.1/json", "appdirs 1.4.4 pypi+https://pypi.org/pypi/appdirs/1.4.4/json", "mypy-extensions 0.4.3 pypi+https://pypi.org/pypi/mypy-extensions/0.4.3/json", "tomli 1.2.1 pypi+https://pypi.org/pypi/tomli/1.2.1/json", "pathspec 0.9.0 pypi+https://pypi.org/pypi/pathspec/0.9.0/json", "regex 2021.7.6 pypi+https://pypi.org/pypi/regex/2021.7.6/json"]
+
+[[package]]
+id = 9
+name = "pathspec"
+version = "0.9.0"
+source = "pypi+https://pypi.org/pypi/pathspec/0.9.0/json"
+dependencies = []
+
+[[package]]
+id = 16
+name = "pytest"
+version = "6.2.4"
+source = "pypi+https://pypi.org/pypi/pytest/6.2.4/json"
+dependencies = ["packaging 21.0 pypi+https://pypi.org/pypi/packaging/21.0/json", "importlib-metadata 4.6.4 pypi+https://pypi.org/pypi/importlib-metadata/4.6.4/json", "attrs 21.2.0 pypi+https://pypi.org/pypi/attrs/21.2.0/json", "iniconfig 1.1.1 pypi+https://pypi.org/pypi/iniconfig/1.1.1/json", "toml 0.10.2 pypi+https://pypi.org/pypi/toml/0.10.2/json", "py 1.10.0 pypi+https://pypi.org/pypi/py/1.10.0/json", "pluggy 0.13.1 pypi+https://pypi.org/pypi/pluggy/0.13.1/json"]
+
+[[package]]
+id = 16
+name = "zipp"
+version = "3.5.0"
+source = "pypi+https://pypi.org/pypi/zipp/3.5.0/json"
+dependencies = []
+
+[[package]]
+id = 12
+name = "appdirs"
+version = "1.4.4"
+source = "pypi+https://pypi.org/pypi/appdirs/1.4.4/json"
+dependencies = []
+
+[[package]]
+id = 3
+name = "geopy"
+version = "2.2.0"
+source = "pypi+https://pypi.org/pypi/geopy/2.2.0/json"
+dependencies = ["geographiclib 1.52.0 pypi+https://pypi.org/pypi/geographiclib/1.52.0/json"]
+
+[[package]]
+id = 15
+name = "typing-extensions"
+version = "3.10.0.0"
+source = "pypi+https://pypi.org/pypi/typing-extensions/3.10.0.0/json"
+dependencies = []
+
+[[package]]
+id = 11
+name = "tomli"
+version = "1.2.1"
+source = "pypi+https://pypi.org/pypi/tomli/1.2.1/json"
+dependencies = []
+
+[metadata]

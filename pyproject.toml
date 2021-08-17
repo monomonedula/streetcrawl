@@ -1,21 +1,26 @@
-# See PEP 518: https://www.python.org/dev/peps/pep-0518/ for info on this file's structure.
-
-[tool.pyflow]
-name = ""
-py_version = "3.7"
+[tool.poetry]
+name = "streetcrawl"
 version = "0.1.0"
+description = "Google Streetview panoramas collector"
+authors = ["monomonedula <valh@tuta.io>"]
+license = "MIT"
 
-
-[tool.pyflow.scripts]
-
-
-[tool.pyflow.dependencies]
+[tool.poetry.dependencies]
+python = "^3.8"
 methodtools = "^0.4.5"
-loguru = "^0.5.3"
+requests = "^2.26.0"
 geopy = "^2.2.0"
+click = "^8.0.1"
+loguru = "^0.5.3"
+Pillow = "^8.3.1"
+pytest-cov = "^2.12.1"
 
-
-[tool.pyflow.dev-dependencies]
+[tool.poetry.dev-dependencies]
 black = "^21.7b0"
 pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+mypy = "^0.910"
 
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

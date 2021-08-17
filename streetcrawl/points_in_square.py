@@ -8,7 +8,7 @@ class PointsInSquare:
         self._side: int = square_side
         self._step: int = step
 
-    def iter(self):
+    def __iter__(self):
         start = self.upper_left_corner()
         for i in range(0, self._side + 1, 30):
             for j in range(0, self._side + 1, 30):

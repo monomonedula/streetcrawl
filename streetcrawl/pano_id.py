@@ -6,7 +6,7 @@ from geopy import Point
 from methodtools import lru_cache
 
 
-class PanoIdOf:
+class PanoIdClosestTo:
     def __init__(self, coords: Point, api_key: str, session: requests.Session):
         self._key: str = api_key
         self._session: requests.Session = session

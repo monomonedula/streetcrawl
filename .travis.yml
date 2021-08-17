@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.8"
+  - "3.9"
+install:
+  - pip install poetry
+  - poetry install
+script:
+  - black --check -v streetcrawl/ test/
+  - mypy streetcrawl/ test/
+  - pytest --cov streetcrawl/ --cov-report xml
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

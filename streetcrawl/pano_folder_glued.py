@@ -9,7 +9,7 @@ from streetcrawl.pano_folder import PanoFolder
 
 
 class PanoFolderGlued(PanoFolder):
-    def __init__(self, directory: Path, pano_id: str, duplicate_on_seams: bool = True):
+    def __init__(self, directory: Path, pano_id: str, duplicate_on_seams: bool = False):
         self._dir: Path = directory
         self._pano: str = pano_id
         self._dup_on_seams: bool = duplicate_on_seams

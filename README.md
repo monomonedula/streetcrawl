@@ -45,7 +45,7 @@ Google allows for max field of view to be equal 120. Note also that `360 % fov` 
 * `--step` -- the grid step. The larger the step the less dense the grid is, the bigger chance that you will miss some panoramas in the explored region.
  However, specifing step less than 10 meters usually doesn't make sense since the panoramas themselves are not so dense.
 * `--resolution` -- resolution of the images to be collected. Example value: `400x800` which means 400 pixels width and 800 pixels height. Defaults to `600x600`.
-
+* `--glue` -- a flag which, if set, glues together parts of fetched panoramas, so every panorama is stored as a single image.
 
 ### To be done
 Exponential backoff and throttling if starting to get `403` responses.

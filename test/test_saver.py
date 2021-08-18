@@ -21,7 +21,7 @@ def test_saver_download_ok():
     seal(session)
     pano_id = "123451234xcavXsdD"
     with tempfile.TemporaryDirectory() as d:
-        assert Saver(120, session, Path(d),).download(
+        assert Saver(120, (900, 600), session, Path(d),).download(
             Pano(pano_id, Point(50.45368983595096, 30.503254762390927), api_key),
         )
         pano_path = Path(d) / pano_id
@@ -50,7 +50,7 @@ def test_saver_download_fail():
     pano_id = "123451234xcavXsdD"
     with tempfile.TemporaryDirectory() as d:
         assert (
-            Saver(120, session, Path(d),).download(
+            Saver(120, (900, 600), session, Path(d),).download(
                 Pano(pano_id, Point(50.45368983595096, 30.503254762390927), api_key),
             )
             is False

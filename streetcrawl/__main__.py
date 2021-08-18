@@ -1,7 +1,7 @@
 import logging
 import os
 from pathlib import Path
-from typing import cast
+from typing import cast, Tuple
 
 import click
 import requests
@@ -23,6 +23,11 @@ def parsed_centre(p: str) -> Point:
     return Point(float(lat), float(lng))
 
 
+def parsed_resolution(p: str) -> Tuple[int, int]:
+    h, w = p.split("x")
+    return int(h), int(w)
+
+
 @click.command()
 @click.argument("centre")
 @click.argument("output_folder")
@@ -34,6 +39,9 @@ def parsed_centre(p: str) -> Point:
     help="Side of the square to be crawler. Defaults to 1500 meters",
 )
 @click.option("--step", default=10, help="Crawling step in meters. Defaults to 10")
+@click.option(
+    "--resolution", default="600x600", help="Crawling step in meters. Defaults to 10"
+)
 def main(
     centre: str,
     output_folder: str,
@@ -41,6 +49,7 @@ def main(
     fov: int,
     square_side: int,
     step: int,
+    resolution: str,
 ):
     api_key = os.environ["STREETVIEW_API_KEY"]
     session = requests.session()
@@ -49,6 +58,7 @@ def main(
             Path(output_folder),
             Saver(
                 fov,
+                parsed_resolution(resolution),
                 session,
                 Path(output_folder),
                 PanoFolderSimple if not glue else PanoFolderGlued,

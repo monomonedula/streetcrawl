@@ -1,6 +1,6 @@
 import logging
 from pathlib import Path
-from typing import Callable
+from typing import Callable, Tuple
 
 import requests
 
@@ -13,6 +13,7 @@ class Saver:
     def __init__(
         self,
         fov: int,
+        resolution: Tuple[int, int],
         session: requests.Session,
         path: Path,
         pano_folder: Callable[[Path, str], PanoFolder] = PanoFolderSimple,
@@ -22,12 +23,15 @@ class Saver:
         self._session: requests.Session = session
         self._dir: Path = path
         self._fov: int = fov
+        self._resolution: Tuple[int, int] = resolution
         self._logger: logging.Logger = logger
 
     def download(self, pano: Pano) -> bool:
         pano_folder = self._folder(self._dir, pano.id())
         images = []
-        for rq in pano.image_requests(fov=self._fov):
+        for rq in pano.image_requests(
+            fov=self._fov, width=self._resolution[0], height=self._resolution[1]
+        ):
             self._logger.info(f"Downloading {rq.url!r} ...")
             resp = self._session.get(rq.url)
             if resp.ok:
